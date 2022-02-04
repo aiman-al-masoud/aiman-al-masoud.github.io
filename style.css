@@ -1,0 +1,43 @@
+body{
+    background: url("./images/campo.jpg");
+    background-size: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.moving_box{
+    color: red;
+    background: black;
+    animation-name: animation_moving_box;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    padding: 30px;
+    border: solid red 3px;
+    border-radius: 30px;
+    
+}
+
+.navbar{
+    padding: 30px;
+    border: solid red 3px;
+    border-radius: 30px;
+    float: top;
+    animation-name: animation_navbar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes animation_moving_box {
+
+    0%, 100% {top: 90px; left: 40px;}
+    25% {top: 160px; left: 40px;}
+    50% {top: 160px; left: 300px;}
+    75% {top: 90px; left: 300px;}
+}
+
+@keyframes animation_navbar{
+    from {transform: rotate(360deg);}
+    
+}

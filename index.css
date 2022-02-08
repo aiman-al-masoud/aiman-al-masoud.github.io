@@ -1,7 +1,12 @@
+body{
+    background: whitesmoke;
+}
+
 .navbar, .footer, .button_normal{
     border: 1px solid black;
     border-radius: 20px;
     padding: 1vw;
+    background-color: grey;
 }
 
 .navbar{
@@ -32,4 +37,8 @@
 
 #h1_welcome:hover{
     color: darkgreen;
+}
+
+a{
+    color: red;
 }

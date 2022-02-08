@@ -1,14 +1,25 @@
+document.getElementById("h1_welcome").addEventListener("click",  new function(){
+    
+    let numClicks = 0;
+    let h1 = document.getElementById("h1_welcome")
 
+    return function(){
+        numClicks++;
+        switch(numClicks){
+            case 1:
+                h1.title = "click me once shame on you..."
+                break;
+            case 2:
+                h1.title = "click me twice... err.. you can't click me again..."
+                break;
+            case 3:
+                window.location.href= './crazy/crazy.html'
+                break;
+        }
+        
+    }
+    
 
-// const audio = document.createElement("audio")
-// audio.src="https://orangefreesounds.com/wp-content/uploads/2021/11/Cat-meowing-loudly-sound.mp3"
-
-
-// audio.play()
-// // setTimeout(audio.play, 3000)
-
-
-
-
+})
 
 

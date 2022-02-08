@@ -1,0 +1,35 @@
+.navbar, .footer, .button_normal{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1vw;
+}
+
+.navbar{
+    float: top;
+}
+
+.footer{
+    float: bottom;
+    text-align: center;
+}
+
+.content{
+    margin: auto;
+    width: 50%;
+}
+
+.text_centered{
+    text-align: center;
+}
+
+.button_normal{
+    background: yellow;
+}
+
+#h1_welcome{
+    cursor: pointer;
+}
+
+#h1_welcome:hover{
+    color: darkgreen;
+}

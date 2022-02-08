@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psittacus</title>
@@ -102,24 +102,28 @@
 
     <header class="navbar">
         <span>🦜</span>
+        <input id="button_welcome" type="button" value="Info" class="normal_button">
         <input id="button_take_lesson" type="button" value="Take Lesson" class="normal_button">
         <input id="button_craft_lesson" type="button" value="Craft Lesson" class="normal_button">
     </header>
 
-    <div id="div_welcome" class="centered hidden" style="text-align: center;">
+    <div id="div_welcome" class="centered displayed" style="text-align: center;">
         <h1>Welcome to Psittacus!</h1>
         <p>To use this app offline, just save it as a .html.</p>
         <p>Windows/Linux: Ctrl + S</p>
         <p>Mac: ⌘ + S</p>
+
+        <h2>Link to the source-code:</h2>
+        <a href="https://github.com/aiman-al-masoud/psittacus" title="link to the code" target="_blank">https://github.com/aiman-al-masoud/psittacus</a>
     </div>
 
 
-    <div id="div_take_lesson" class="centered displayed">
+    <div id="div_take_lesson" class="hidden centered">
         
 
 
 
-    <meta charset="UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take Lesson</title>
@@ -172,7 +176,7 @@
 
 
 
-    <meta charset="UTF-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Craft Lesson</title>
@@ -230,7 +234,7 @@
     <h3>Choose a Direction of Translation:</h3>
 
     <label for="invert_translation_direction">From target to source language (default)</label>
-    <input type="checkbox" id="invert_translation_direction" class="checkbox" checked="checked">
+    <input type="checkbox" id="invert_translation_direction" class="checkbox">
 
     <br>
 
@@ -281,7 +285,7 @@
     </div>
 
 
-    <script defer="defer"> const recordAudio=()=>new Promise(async resolve=>{const stream=await navigator.mediaDevices.getUserMedia({audio:true});const mediaRecorder=new MediaRecorder(stream);const audioChunks=[];mediaRecorder.addEventListener("dataavailable",event=>{audioChunks.push(event.data);});const start=()=>mediaRecorder.start();const stop=()=>new Promise(resolve=>{mediaRecorder.addEventListener("stop",()=>{const audioBlob=new Blob(audioChunks,{type:"audio/mpeg"});const audioUrl=URL.createObjectURL(audioBlob);const audio=new Audio(audioUrl);const play=()=>audio.play();resolve({audioBlob,audioUrl,play});});mediaRecorder.stop();});resolve({start,stop});});async function audioToBase64(audioFile){return new Promise((resolve,reject)=>{let reader=new FileReader();reader.onerror=reject;reader.onload=(e)=>resolve(e.target.result);reader.readAsDataURL(audioFile);});}
+    <script defer=""> const recordAudio=()=>new Promise(async resolve=>{const stream=await navigator.mediaDevices.getUserMedia({audio:true});const mediaRecorder=new MediaRecorder(stream);const audioChunks=[];mediaRecorder.addEventListener("dataavailable",event=>{audioChunks.push(event.data);});const start=()=>mediaRecorder.start();const stop=()=>new Promise(resolve=>{mediaRecorder.addEventListener("stop",()=>{const audioBlob=new Blob(audioChunks,{type:"audio/mpeg"});const audioUrl=URL.createObjectURL(audioBlob);const audio=new Audio(audioUrl);const play=()=>audio.play();resolve({audioBlob,audioUrl,play});});mediaRecorder.stop();});resolve({start,stop});});async function audioToBase64(audioFile){return new Promise((resolve,reject)=>{let reader=new FileReader();reader.onerror=reject;reader.onload=(e)=>resolve(e.target.result);reader.readAsDataURL(audioFile);});}
 class Recorder{constructor(){this.recording=null
 this.recorder=null
 this.base64=null}
@@ -354,6 +358,8 @@ document.getElementById("button_craft_lesson").addEventListener("click",function
 showElement(document.getElementById("div_craft_lesson"))})
 document.getElementById("button_take_lesson").addEventListener("click",function(){hideEverything()
 showElement(document.getElementById("div_take_lesson"))})
+document.getElementById("button_welcome").addEventListener("click",function(){hideEverything()
+showElement(document.getElementById("div_welcome"))})
 function hideEverything(){hideElement(document.getElementById("div_take_lesson"))
 hideElement(document.getElementById("div_craft_lesson"))
 hideElement(document.getElementById("div_welcome"))}

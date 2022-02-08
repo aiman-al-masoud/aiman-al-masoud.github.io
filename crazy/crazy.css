@@ -1,0 +1,93 @@
+body{
+    background: url("./images/campoOvest.jpg");
+    background-size: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.moving_box{
+    color: red;
+    background: black;
+    animation-name: animation_moving_box;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    padding: 30px;
+    border: solid red 3px;
+    border-radius: 30px;
+    
+}
+
+.navbar{
+    padding: 30px;
+    border: solid red 3px;
+    border-radius: 30px;
+    float: top;
+    animation-name: animation_navbar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+
+
+.chopper{
+    animation-name: animation_chopper;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 10000;
+}
+
+
+
+.footer{
+    position: absolute;
+    float: bottom;
+    margin-top: 500px;
+    padding: 30px;
+    border: solid red 3px;
+    border-radius: 30px;
+    animation-name: animation_footer;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-size: xx-large;
+    background :black;
+    color: red;
+
+}
+
+
+
+
+@keyframes animation_chopper {
+    
+    0%, 100% {top: 90px; left: 400px;}
+    25% {top: 160px; left: 400px; transform: rotate(10deg);}
+    50% {top: 160px; left: 500px; transform: rotate(-10deg);}
+    75% {top: 90px; left: 500px; transform: rotate(10deg);}
+}
+
+
+
+
+
+@keyframes animation_moving_box {
+
+    0%, 100% {top: 90px; left: 40px;}
+    25% {top: 160px; left: 40px;}
+    50% {top: 160px; left: 300px;}
+    75% {top: 90px; left: 300px;}
+}
+
+@keyframes animation_navbar{
+    from {transform: rotate(360deg);}
+    
+}
+
+
+@keyframes animation_footer{
+    0%, 100% {left: 10px;}
+    50% {left : 800px;}
+}
+

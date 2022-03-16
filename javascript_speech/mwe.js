@@ -28,10 +28,13 @@ recognition.onspeechend = function () {
 
 recognition.onnomatch = function (event) {
     console.log(event)
+    document.getElementById("output").innerHTML = event.toString()
+
 }
 
 recognition.onerror = function (event) {
     console.log(event)
+    document.getElementById("output").innerHTML = event.toString()
 }
 
 document.getElementById("start").addEventListener("click", ()=>{

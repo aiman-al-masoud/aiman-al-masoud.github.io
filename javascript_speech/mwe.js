@@ -18,6 +18,7 @@ recognition.maxAlternatives = 1;
 recognition.onresult = function (event) {
     var color = event.results[0][0].transcript;
     console.log(color)
+    document.getElementById("output").innerHTML = color
 }
 
 

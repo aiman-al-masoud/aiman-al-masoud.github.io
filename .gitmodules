@@ -1,0 +1,3 @@
+[submodule "max-recursion-error"]
+	path = max-recursion-error
+	url = https://github.com/aiman-al-masoud/max-recursion-error.git
